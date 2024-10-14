@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="com.nostr.signer" path="/com/nostr/signer/">
+    <!-- Store user's preferred keys -->
+    <key name="preferred-keys" type="as">
+      <default>['']</default>
+      <summary>List of preferred keys</summary>
+      <description>A list of the preferred Nostr keys used by the signer.</description>
+    </key>
+
+    <!-- Store permissions for each app -->
+    <key name="app-permissions" type="a{sas}">
+      <default>{}</default>
+      <summary>Permissions granted to apps</summary>
+      <description>A mapping of app identifiers to granted permissions (sign_event, nip04_encrypt, etc.).</description>
+    </key>
+  </schema>
+</schemalist>
