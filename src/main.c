@@ -6,7 +6,7 @@ void on_add_key_button_clicked(GtkButton *button, gpointer user_data);
 void on_remove_key_button_clicked(GtkButton *button, gpointer user_data);
 
 int main(int argc, char *argv[]) {
-    GtkApplication *app = gtk_application_new("com.nostr.signer", G_APPLICATION_FLAGS_NONE);
+    GtkApplication *app = gtk_application_new("com.gnostr.signer", G_APPLICATION_FLAGS_NONE);
 
     // Initialize actions
     g_signal_connect(app, "startup", G_CALLBACK(create_actions), NULL);

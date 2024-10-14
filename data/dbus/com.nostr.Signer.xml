@@ -1,0 +1,55 @@
+<node>
+	<interface name="com.nostr.Signer">
+		<!-- Get Public Key -->
+		<method name="GetPublicKey">
+			<arg type="s" direction="out" name="npub" />
+		</method>
+
+		<!-- Sign Event -->
+		<method name="SignEvent">
+			<arg type="s" direction="in" name="eventJson" />
+			<arg type="s" direction="in" name="current_user" />
+			<arg type="s" direction="in" name="app_id" />
+			<arg type="s" direction="out" name="signature" />
+		</method>
+
+		<!-- NIP-04 Encrypt -->
+		<method name="NIP04Encrypt">
+			<arg type="s" direction="in" name="plaintext" />
+			<arg type="s" direction="in" name="pubKey" />
+			<arg type="s" direction="in" name="current_user" />
+			<arg type="s" direction="out" name="encryptedText" />
+		</method>
+
+		<!-- NIP-44 Encrypt -->
+		<method name="NIP44Encrypt">
+			<arg type="s" direction="in" name="plaintext" />
+			<arg type="s" direction="in" name="pubKey" />
+			<arg type="s" direction="in" name="current_user" />
+			<arg type="s" direction="out" name="encryptedText" />
+		</method>
+
+		<!-- NIP-04 Decrypt -->
+		<method name="NIP04Decrypt">
+			<arg type="s" direction="in" name="encryptedText" />
+			<arg type="s" direction="in" name="pubKey" />
+			<arg type="s" direction="in" name="current_user" />
+			<arg type="s" direction="out" name="plaintext" />
+		</method>
+
+		<!-- NIP-44 Decrypt -->
+		<method name="NIP44Decrypt">
+			<arg type="s" direction="in" name="encryptedText" />
+			<arg type="s" direction="in" name="pubKey" />
+			<arg type="s" direction="in" name="current_user" />
+			<arg type="s" direction="out" name="plaintext" />
+		</method>
+
+		<!-- Decrypt Zap Event -->
+		<method name="DecryptZapEvent">
+			<arg type="s" direction="in" name="eventJson" />
+			<arg type="s" direction="in" name="current_user" />
+			<arg type="s" direction="out" name="decryptedEvent" />
+		</method>
+	</interface>
+</node>

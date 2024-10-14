@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-  <schema id="com.nostr.signer" path="/com/nostr/signer/">
+  <schema id="com.gnostr.signer" path="/com/nostr/signer/">
     <!-- Store user's preferred keys -->
     <key name="preferred-keys" type="as">
       <default>['']</default>
